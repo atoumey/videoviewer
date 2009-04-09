@@ -1,0 +1,34 @@
+﻿<Window x:Class="VideoViewer.OptionsWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Options" Height="216" Width="560"
+    WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow"
+    ResizeMode="NoResize">
+    <StackPanel Margin="5">
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Label MinWidth="100" HorizontalContentAlignment="Right">Folder Color</Label>
+            <Button Name="FolderButton" Width="100" Background="{Binding FolderBrush}" Click="OnFolderButtonClick"></Button>
+            <Label MinWidth="100" HorizontalContentAlignment="Right">Folder Text Color</Label>
+            <Button Name="FolderTextButton" Width="100" Background="{Binding FolderTextBrush}" Click="OnFolderTextButtonClick"></Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Label MinWidth="100" HorizontalContentAlignment="Right">File Color</Label>
+            <Button Name="FileButton" Width="100" Background="{Binding FileBrush}" Click="OnFileButtonClick"></Button>
+            <Label MinWidth="100" HorizontalContentAlignment="Right">File Text Color</Label>
+            <Button Name="FileTextButton" Width="100" Background="{Binding FileTextBrush}" Click="OnFileTextButtonClick"></Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Label MinWidth="100" HorizontalContentAlignment="Right">Launching App</Label>
+            <TextBox Name="AppPathTextBox" Width="400"></TextBox>
+            <Button MinWidth="25" Click="OnAppPathClick">...</Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Label MinWidth="100" HorizontalContentAlignment="Right">Default Folder</Label>
+            <TextBox Name="DefaultViewPathTextBox" Width="400"></TextBox>
+            <Button MinWidth="25" Click="OnDefaultFolderButtonClick">...</Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Margin="5" Width="50" Height="30" Click="OnOKClick">OK</Button>
+        </StackPanel>
+    </StackPanel>
+</Window>
